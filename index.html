@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css?family=Archivo:500|Open+Sans:300,700" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@1,500&display=swap" rel="stylesheet">
+    <title>Welcome to Budget Buddy</title>
+</head>
+
+<body>
+    <header class="header">
+        <img class="moneyPic one" src="https://png2.cleanpng.com/sh/5a22d0c81ad7b942e70472dcb1e48bb3/L0KzQYm3VcEzN6N9fZH0aYP2gLBuTf1wdpZARdV4aX6wc73wkL1ieqUyTdNvNnK0SbTqVPNla2czSqsDOUS3SYe4VcI3OWI7T6g9OEC5QXB3jvc=/kisspng-money-coin-clip-art-5af6b19cc4cdc6.2989449615261167648061.png" />
+        <h2>
+            Your weekly budget:
+            <br>
+             <span id="dollarSign">$</span><span id="budgetDisplay"></span>
+        </h2>
+        <img class="moneyPic two" src="https://png2.cleanpng.com/sh/5a22d0c81ad7b942e70472dcb1e48bb3/L0KzQYm3VcEzN6N9fZH0aYP2gLBuTf1wdpZARdV4aX6wc73wkL1ieqUyTdNvNnK0SbTqVPNla2czSqsDOUS3SYe4VcI3OWI7T6g9OEC5QXB3jvc=/kisspng-money-coin-clip-art-5af6b19cc4cdc6.2989449615261167648061.png" />
+    </header>
+
+    <div class="container">
+        <div class="enterBudget">
+            <h1>Welcome to Budget Buddy!</h1>
+            <img class="moneyPic one" src="https://png2.cleanpng.com/sh/5a22d0c81ad7b942e70472dcb1e48bb3/L0KzQYm3VcEzN6N9fZH0aYP2gLBuTf1wdpZARdV4aX6wc73wkL1ieqUyTdNvNnK0SbTqVPNla2czSqsDOUS3SYe4VcI3OWI7T6g9OEC5QXB3jvc=/kisspng-money-coin-clip-art-5af6b19cc4cdc6.2989449615261167648061.png" />
+            <h2>Enter your weekly budget:</h2>
+            <img class="moneyPic two" src="https://png2.cleanpng.com/sh/5a22d0c81ad7b942e70472dcb1e48bb3/L0KzQYm3VcEzN6N9fZH0aYP2gLBuTf1wdpZARdV4aX6wc73wkL1ieqUyTdNvNnK0SbTqVPNla2czSqsDOUS3SYe4VcI3OWI7T6g9OEC5QXB3jvc=/kisspng-money-coin-clip-art-5af6b19cc4cdc6.2989449615261167648061.png" />
+            <form id="submitBudget">
+            <input type="number" id="budgetInput" name="budgetInput">
+            <button class="submit" type="submit">Submit</button>
+            </form>
+
+        </div>
+        <button id="resetBudget">Reset Budget</button>
+        <div class="budgetForm">
+            <form id="mainForm">
+                <label for="payee">Payee:</label>
+                <input type="text" name="payee" id="payee" placeholder="Name of recipient">
+
+                <label for="amount">Amount:</label>
+                <input type="number" name="amount" id="amount" placeholder="$0.00">
+
+                <label for="category">Category:</label>
+                <select id="category">
+                    <option>Entertainment</option>
+                    <option>Food</option>
+                    <option>Clothing</option>
+                    <option>Bills</option>
+                </select>
+
+                <button id="submitListItems" type="submit">Submit</button>
+            </form>
+                <div id="itemsAdded"></div>
+                </div>
+        <section>
+            <h3>Total Spent: <span id="totalSpent"></span>
+            <h3>Amount Left in Budget: <span id="amountLeftInBudget"></span></h3>
+            </p>
+        </section>
+
+        <ul id="newEntry"></ul>
+    </div>
+
+    <div class="showCategoryTotals">
+        <h5>Click Here to See Totals by Category</h5>
+    </div>
+      <div class="hideCategoryTotals">
+        <h2>Spending Totals by Category</h2>
+        <div class="innerCatTotals">
+        <h4>Entertainment: <span id="entertainmentTotal"></span></h4>
+            <h4>Food: <span id="foodTotal"></span></h4>
+            <h4>Clothing: <span id="clothingTotal"></span></h4>
+            <h4>Bills: <span id="billsTotal"></span></h4>
+
+        </div>            
+      </div>
+    </div>
+    </div>   
+    </div>
+    </div>
+        <canvas id="myChart"></canvas>
+
+    <script src="script.js"></script>
+</body>
+</html>

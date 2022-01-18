@@ -1,0 +1,489 @@
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 30px;
+    font-family: 'Archivo Narrow', sans-serif;
+}
+
+h2, h3, h4, h5, h6, button {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 30px;
+}
+.moneyPic.one{
+    background: transparent;
+    position: absolute;
+    left: 10px;
+    top: 125px;
+    height: 75px;
+    width: 65px;
+}
+.moneyPic.two{
+    background: transparent;
+    position: absolute;
+    transform: scaleX(-1);
+    right: 10px;
+    top: 125px;
+    height: 75px;
+    width: 65px;
+}
+button{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.2s;
+    cursor: pointer;
+
+}
+
+#resetBudget{
+    width: 100%;
+    position: relative;    
+    margin-top: 20px;
+    margin-bottom: 15px;
+    background-color: #4CAF50; 
+    color: white; 
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+#resetBudget:hover {
+    background-color: #79d47c;
+    color: black;
+    border-radius: 10px;
+}
+
+.submit{
+    margin-top: 20px;
+    background-color: #4CAF50; 
+    color: white;
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.submit:hover {
+    background-color: #79d47c;
+    color: black;
+    border-radius: 10px;
+
+}
+#submitListItems{
+    width: 100%;
+    background-color: #4CAF50; 
+    color: white; 
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+    font-weight: bold;
+    margin-top: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#submitListItems:hover{
+    background-color: #79d47c;
+    color: black;
+    border-radius: 10px;
+}
+
+label{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding-left: 8px;
+  }
+
+#payee{
+    width: 100%;
+    padding: 12px 20px;
+    margin-top: 20px;
+}
+
+#category{
+    width: 100%;
+    padding: 0px 20px;
+    margin: 8px 0;
+}
+
+#amount{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+h2{
+    width: 100%;
+    font-size: 30px;
+}
+
+#budgetInput{
+    width: 50%;
+    padding: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#budgetInput:hover{
+    background-color: rgb(240, 255, 218);
+}
+#payee:hover{
+    background-color: rgb(240, 255, 218);
+}
+#amount:hover {
+    background-color: rgb(240, 255, 218);
+}
+
+button.submit{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#budgetDisplay{
+    display: inline-flex;
+    color: white;
+    text-align: center;
+    font-size: 100px;
+    margin-top: 30px;
+}
+
+#dollarSign {
+    font-size: 100px;
+    margin-top: 30px;
+}
+
+.headerShow {
+    display: flex;
+    color: white;
+    text-align: center;
+    padding-bottom: 100px;
+    margin: 0px;
+    font-size: 20px;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, #018884 , #017054);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+input[type="number"] {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding-left: 8px;
+}
+
+select {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding-left: 5px;
+
+}
+
+#submitBudget{
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    align-items: center; 
+}
+
+#payee {
+    height: 50px;
+    margin-top: 0px;
+    font-size: 16px;
+}
+
+#amount {
+    height: 50px;
+    font-size: 16px;
+}
+
+#category {
+    height: 50px;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.enterBudget {
+    text-align: center;
+    color: white;
+    padding: 20px;
+    margin: 0px;
+    font-size: 25px;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, #018884 , #017054);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.enterBudgetHide {
+    display: none;
+}
+
+header {
+    display: none;
+    text-align: center;
+    height: 140px;
+    padding: 30px;
+    margin: 0px;
+    font-size: 25px;
+    background-image: linear-gradient(to right, #018884 , #017054);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+ul {
+    display: block;
+    padding-left: 0px;
+    list-style: none;
+}
+
+ul#newEntry{
+    display: block;
+    width: 100%;
+    height: 250px;
+    overflow: auto;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid lightgray;
+    padding: 10px 0;
+    font-size: 1rem;
+    color: #595959;
+    margin-left: 20px;
+}
+
+input#payee{
+    margin-top: 10px;
+}
+
+.listItem {
+    flex-grow: 1;
+    border-bottom: 1px solid lightgray;
+}
+
+header h2 {
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+    margin: 0px;
+    font-size: 35px;
+    height: 80px;
+}
+
+.hideCategoryTotals {
+    display: none;
+    margin: auto;
+    padding: 20px;
+    width: 90%;
+    border: 2px #017054 solid;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, #018884 , #017054);
+    color: white;
+    margin: auto;
+    text-align: center;
+}
+.hideCategoryTotals h2{
+    margin: 0;
+}
+.showCategoryTotals {
+    margin: auto;
+    border: 2px #017054 solid;
+    border-radius: 10px;
+    width: 90%;
+    background-image: linear-gradient(to right, #018884 , #017054);
+    color: white;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.innerCatTotals {
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+    padding-left: 30px;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+h5 {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+h4 {
+    color: black;
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.categoryTotals span {
+    font-size: 20px;
+}
+
+.categoryTotals h2 {
+    text-align: center;
+    
+}
+section span {
+    font-size: 20px;
+}
+.categoryTotals h4 {
+    margin-left: 15px;
+}
+#myChart {
+    pointer-events: none;
+}
+
+@media only screen and (min-width: 275px){
+    .moneyPic.one{
+        left: 10px;
+        top: 125px;
+        height: 75px;
+        width: 65px;
+    }
+    .moneyPic.two{
+        right: 10px;
+        top: 125px;
+        height: 75px;
+        width: 65px;
+    }
+}
+
+#myChart {
+    width:100%;
+    max-width:600px;
+    display: block;
+    pointer-events: none;
+    }
+
+
+@media only screen and (min-width: 600px){
+
+    .moneyPic.one{
+        
+        left: 25px;
+        top: 100px;
+        height: 100px;
+        width: 100px;
+    }
+    .moneyPic.two{
+       
+        right: 25px;
+        top: 100px;
+        height: 100px;
+        width: 100px;
+    }
+}
+@media only screen and (min-width: 768px){
+    header h2{
+        font-size: 45px;
+    }
+    .moneyPic.one{
+        left: 40px;
+        top: 50px;
+        height: 150px;
+        width: 150px;
+    }
+    .moneyPic.two{ 
+        right: 40px;
+        top: 50px;
+        height: 150px;
+        width: 150px;
+    }
+    #mainForm{
+        width: 50%;
+        height: 200px;
+    }
+    #newEntry {
+        position: absolute;
+        right: 5px;
+        top: 265px;
+        width: 50%;
+    }
+    section{
+        margin-top: 160px;
+        width: 50%;
+    }
+    section h3{
+        width: 400px;
+    }
+    .budgetForm {
+        display: flex;
+        height: 200px;
+        margin-bottom: 5px;
+    }
+
+    .submitListItems{
+        margin-bottom: 10px;
+        
+    }
+    .categoryTotals {
+        width: 50%;
+    }
+    li {
+        margin-left: 100px;
+    }
+    h2{
+       font-size: 25px;
+       margin-top: 10px;
+       margin-bottom: 10px;
+    }
+    #resetBudget{
+        width: 50%;
+        position: relative;    
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    ul#newEntry{
+        display: block;
+        width: 50%;
+        height: 500px;
+        overflow: auto;
+    }
+    .hideCategoryTotals{
+        width: 45%;
+        position: absolute;
+        top: 805px;
+        margin-right: 5px;
+    }
+    .showCategoryTotals{
+        width: 50%;
+        position: absolute;
+        top: 805px;
+    }
+    #myChart{
+        width: 50%;
+        max-width: 50%;
+        position: absolute;
+        right: 0;
+        top: 805px;
+        margin-left: 5px;
+        pointer-events: none;
+    }
+}
