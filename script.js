@@ -38,6 +38,13 @@ let billsTotal = 0;
 let amountLeftBudget = 0;
 let totalSpent = 0;
 
+entertainmentTotal.toFixed(2);
+foodTotal.toFixed(2);
+clothingTotal.toFixed(2);
+billsTotal.toFixed(2);
+amountLeftBudget.toFixed(2);
+totalSpent.toFixed(2);
+
 let mainForm = document.getElementById("mainForm");
 let amount = document.getElementById("amount");
 let userTotal = 0;
@@ -54,20 +61,20 @@ mainForm.addEventListener('submit', event => {
     newEntry = document.getElementById("newEntry");
     let listItem = document.createElement("li");
 
-    if(totalSpent + parseInt(amount.value)<= parseInt(budgetDisplay.innerText)){
+    if(totalSpent + parseFloat(amount.value)<= parseFloat(budgetDisplay.innerText)){
     listItem.innerText = payee.value + " | Amount: $" + amount.value + " | Category: " + category.value;
     
     newEntry.append(listItem);
     };
 
     if(category.value === "Entertainment"){
-        if(parseInt(budgetDisplay.innerText) - totalSpent > 0){
-            if(totalSpent + parseInt(amount.value) <= parseInt(budgetDisplay.innerText)){
-        totalSpent += parseInt(amount.value);
+        if(parseFloat(budgetDisplay.innerText) - totalSpent > 0){
+            if(totalSpent + parseFloat(amount.value) <= parseFloat(budgetDisplay.innerText)){
+        totalSpent += parseFloat(amount.value);
         totalSpentSpan.innerText = `$${totalSpent}`; 
-        amountLeftBudget = parseInt(budgetDisplay.innerText) - totalSpent;
+        amountLeftBudget = parseFloat(budgetDisplay.innerText) - totalSpent;
         amountLeftInBudgetSpan.innerText = `$${amountLeftBudget}`;
-        entertainmentTotal += parseInt(amount.value);
+        entertainmentTotal += parseFloat(amount.value);
         yValues[0] = entertainmentTotal;
         entertainmentTotalSpan.innerText = `$${entertainmentTotal}`;
 
@@ -80,13 +87,13 @@ mainForm.addEventListener('submit', event => {
         }
     
     } else if (category.value === "Food"){
-        if(parseInt(budgetDisplay.innerText) - totalSpent > 0){
-            if(totalSpent + parseInt(amount.value) <= parseInt(budgetDisplay.innerText)){
-                totalSpent += parseInt(amount.value);
+        if(parseFloat(budgetDisplay.innerText) - totalSpent > 0){
+            if(totalSpent + parseFloat(amount.value) <= parseFloat(budgetDisplay.innerText)){
+                totalSpent += parseFloat(amount.value);
                 totalSpentSpan.innerText = `$${totalSpent}`; 
-                amountLeftBudget = parseInt(budgetDisplay.innerText) - totalSpent;
+                amountLeftBudget = parseFloat(budgetDisplay.innerText) - totalSpent;
                 amountLeftInBudgetSpan.innerText = `$${amountLeftBudget}`;
-                foodTotal += parseInt(amount.value);
+                foodTotal += parseFloat(amount.value);
                 foodTotalSpan.innerText = `$${foodTotal}`;
                 yValues[1] = foodTotal;
                 
@@ -99,13 +106,13 @@ mainForm.addEventListener('submit', event => {
         }
 
     } else if (category.value === "Clothing"){
-        if(parseInt(budgetDisplay.innerText) - totalSpent > 0){
-            if(totalSpent + parseInt(amount.value) <= parseInt(budgetDisplay.innerText)){
-                totalSpent += parseInt(amount.value);
+        if(parseFloat(budgetDisplay.innerText) - totalSpent > 0){
+            if(totalSpent + parseFloat(amount.value) <= parseFloat(budgetDisplay.innerText)){
+                totalSpent += parseFloat(amount.value);
                 totalSpentSpan.innerText = `$${totalSpent}`; 
-                amountLeftBudget = parseInt(budgetDisplay.innerText) - totalSpent;
+                amountLeftBudget = parseFloat(budgetDisplay.innerText) - totalSpent;
                 amountLeftInBudgetSpan.innerText = `$${amountLeftBudget}`;
-                clothingTotal += parseInt(amount.value);
+                clothingTotal += parseFloat(amount.value);
                 clothingTotalSpan.innerText = `$${clothingTotal}`;
                 yValues[2] = clothingTotal;
                 
@@ -118,13 +125,13 @@ mainForm.addEventListener('submit', event => {
         }
 
     } else if(category.value === "Bills"){
-        if(parseInt(budgetDisplay.innerText) - totalSpent > 0){
-            if(totalSpent + parseInt(amount.value) <= parseInt(budgetDisplay.innerText)){
-                totalSpent += parseInt(amount.value);
+        if(parseFloat(budgetDisplay.innerText) - totalSpent > 0){
+            if(totalSpent + parseFloat(amount.value) <= parseFloat(budgetDisplay.innerText)){
+                totalSpent += parseFloat(amount.value);
                 totalSpentSpan.innerText = `$${totalSpent}`; 
-                amountLeftBudget = parseInt(budgetDisplay.innerText) - totalSpent;
+                amountLeftBudget = parseFloat(budgetDisplay.innerText) - totalSpent;
                 amountLeftInBudgetSpan.innerText = `$${amountLeftBudget}`;
-                billsTotal += parseInt(amount.value);
+                billsTotal += parseFloat(amount.value);
                 billsTotalSpan.innerText = `$${billsTotal}`;
                 yValues[3] = billsTotal;
               
